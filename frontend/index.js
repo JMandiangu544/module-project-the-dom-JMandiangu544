@@ -17,11 +17,16 @@ function moduleProject1() {
   const randomIdx = Math.floor(Math.random() * quotes.length)
   const randomQuote = quotes[randomIdx]
   
-  const quoteWidget = document.createElement('div')
+  const quote = document.createElement('div')
   const quoteText = randomQuote.quote
   quote.textContent = quoteText
   const widget1 = document.querySelector('.quoteoftheday')
   widget1.appendChild(quote)
+
+  const authorDate = document.createElement('div')
+  const { author, date } = randomQuote
+  authorDate.textContent = `${author} in ${date || "in an unknown date"}`
+  widget1.appendChild(authorDate)
 
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
