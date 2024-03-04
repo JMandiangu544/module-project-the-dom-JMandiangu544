@@ -7,18 +7,21 @@ function moduleProject1() {
 
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
   //  ✨ add your code here
-  const widgets = document.querySelectorAll('.quoteoftheday, .corporatespeak, .countdown, .friends');
+  const widgets = document.querySelectorAll('section>div');
   widgets.forEach(widget => {
     widget.classList.add('widget');
   });
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
   //  ✨ add your code here
-  const quoteWidget = document.createElement('div');
-  quoteWidget.classList.add('quote-widget', 'widget');
-  quoteWidget.innerHTML = '<h3>Quote of the Day</h3><p>Here goes the quote content...</p>';
-  document.body.appendChild(quoteWidget);
-
+  const randomIdx = Math.floor(Math.random() * quotes.length)
+  const randomQuote = quotes[randomIdx]
+  
+  const quoteWidget = document.createElement('div')
+  const quoteText = randomQuote.quote
+  quote.textContent = quoteText
+  const widget1 = document.querySelector('.quoteoftheday')
+  widget1.appendChild(quote)
 
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
