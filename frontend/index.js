@@ -88,7 +88,7 @@ function moduleProject1() {
       }
     }
   }
-  personParagraph.textContent = sentence
+  personParagraph.textContent = sentence()
 
   console.log(person)
 
