@@ -78,7 +78,8 @@ function moduleProject1() {
       const friend = people.find(p => p.id === friendId)
       const fullName = `${friend.fname} ${friend.lname}`
       console.log(fullName)
-      let isLastIdx = idx === person.friends.length - 2
+      let isLastIdx = idx === person.friends.length - 1
+      let isNextToLastIdx = idx === person.friends.length - 2
       if (isLastIdx) {
         sentence += `${fullName}.`
       } else if (isNextToLastIdx) {
