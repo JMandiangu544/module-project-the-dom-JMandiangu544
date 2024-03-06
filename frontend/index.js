@@ -67,7 +67,7 @@ function moduleProject1() {
   const personParagraph = document.createElement('p')
   document.querySelector('.friends').appendChild(personParagraph)
   const year = person.date0fBirth.split('-')[0]
-  let sentence = `${person.fname} ${person.lname} was born in ${year} and`
+  let sentence = `${person.fname} ${person.lname} was born in ${year} and `
 
   if (!person.friends.length) {
     sentence += 'has no friends.'
